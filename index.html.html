@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Berlin Sans FB Demi;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #2E8B57;}
+#About {background-color: #00FF7F;}
+#Feed {background-color: #8FBC8F;}
+#Upcoming Events {background-color: #3CB371;}
+
+</style>
+
+<title>HOME - MTB HQ - Llandderfel</title>
+
+</head>
+
+<body>
+
+
+<button class="tablink" onclick="openPage('Home', this, '#2E8B57')">Home</button>
+<button class="tablink" onclick="openPage('About', this, '#00FF7F')">About</button>
+<button class="tablink" onclick="openPage('Feed', this, '#8FBC8F')">Feed</button>
+<button class="tablink" onclick="openPage('Upcoming Events', this, '#3CB371')">Upcoming Events</button>
+
+<div id="Home" class="tabcontent">
+	
+	<header>
+	<h1 style="background-color:66ff66;text-align:left;">Mountain Bike HQ - Llandderfel</h1>
+	
+	</header>
+	
+	<p>Welcome to MTB HQ - Llandderfel here we discuss everything mountain bike related in the small village of Llandderfel. From new trails and features to the most recent crashes and sends.</p>
+	<div style="text-align:right">
+		<iframe width="420" height="315"
+		src="https://www.youtube.com/watch?v=Xo58oI4lv9g">
+		</iframe> 
+	</div>
+</div>
+
+<div id="About" class="tabcontent">
+	<h1>About</h1>
+	<p>Some news this fine day!</p>
+</div>
+
+<div id="Feed" class="tabcontent">
+	<h1>Feed</h1>
+	<p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Upcoming Events" class="tabcontent">
+	<h1>Upcoming Events</h1>
+	<p>Here's everything we'll be doing in the future.</p>
+</div>
+
+<script>
+
+function openPage(pageName, elmnt, color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click(); 
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
